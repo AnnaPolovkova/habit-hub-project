@@ -19,6 +19,7 @@ type Msg =
     | CheckAchievements
     | ToggleReminder of HabitId
     | NoOp
+    
 
 let validateHabit (title: string) (description: string) (target: string) : Result<int, string> =
     if String.IsNullOrWhiteSpace(title) then
