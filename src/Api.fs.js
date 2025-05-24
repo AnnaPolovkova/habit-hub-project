@@ -3,8 +3,8 @@ import { defaultOf, uncurry } from "./fable_modules/fable-library.4.0.0/Util.js"
 import { Model$reflection, HabitCategory } from "./Model.fs.js";
 import { newGuid } from "./fable_modules/fable-library.4.0.0/Guid.js";
 import { add } from "./fable_modules/fable-library.4.0.0/Map.js";
-import { toString, Auto_generateBoxedEncoder_437914C6, decimal } from "./fable_modules/Thoth.Json.10.4.1/./Encode.fs.js";
-import { fromString, Auto_generateBoxedDecoder_Z6670B51, decimal as decimal_1 } from "./fable_modules/Thoth.Json.10.4.1/./Decode.fs.js";
+import { Auto_generateBoxedEncoder_437914C6, toString, decimal } from "./fable_modules/Thoth.Json.10.4.1/./Encode.fs.js";
+import { Auto_generateBoxedDecoder_Z6670B51, fromString, decimal as decimal_1 } from "./fable_modules/Thoth.Json.10.4.1/./Decode.fs.js";
 import { empty } from "./fable_modules/Thoth.Json.10.4.1/Extra.fs.js";
 import { ExtraCoders } from "./fable_modules/Thoth.Json.10.4.1/Types.fs.js";
 import { toConsole } from "./fable_modules/fable-library.4.0.0/String.js";
@@ -21,8 +21,7 @@ function encodeHabitCategory(cat) {
             return "Personal";
         }
         case 4: {
-            const s = cat.fields[0];
-            return s;
+            return cat.fields[0];
         }
         default: {
             return "Health";
@@ -44,8 +43,7 @@ const decodeHabitCategory = (path_1) => ((value_1) => andThen(uncurry(3, (_arg) 
         return (arg10$0040_3) => ((arg20$0040_3) => succeed(new HabitCategory(3, []), arg10$0040_3, arg20$0040_3));
     }
     else {
-        const s = _arg;
-        return (arg10$0040_4) => ((arg20$0040_4) => succeed(new HabitCategory(4, [s]), arg10$0040_4, arg20$0040_4));
+        return (arg10$0040_4) => ((arg20$0040_4) => succeed(new HabitCategory(4, [_arg]), arg10$0040_4, arg20$0040_4));
     }
 }), string, path_1, value_1));
 
@@ -56,8 +54,7 @@ export const extraCoders = (() => {
 })();
 
 export function saveState(model) {
-    let encoder;
-    localStorage.setItem("habitTrackerState", (encoder = Auto_generateBoxedEncoder_437914C6(Model$reflection(), void 0, extraCoders, void 0), toString(4, encoder(model))));
+    localStorage.setItem("habitTrackerState", toString(4, Auto_generateBoxedEncoder_437914C6(Model$reflection(), void 0, extraCoders, void 0)(model)));
 }
 
 export function loadState() {
@@ -66,18 +63,13 @@ export function loadState() {
         return void 0;
     }
     else {
-        const json = matchValue;
-        let matchValue_1;
-        const decoder = Auto_generateBoxedDecoder_Z6670B51(Model$reflection(), void 0, extraCoders);
-        matchValue_1 = fromString(uncurry(2, decoder), json);
+        const matchValue_1 = fromString(uncurry(2, Auto_generateBoxedDecoder_Z6670B51(Model$reflection(), void 0, extraCoders)), matchValue);
         if (matchValue_1.tag === 1) {
-            const err = matchValue_1.fields[0];
-            toConsole(`Ошибка при декодировании: ${err}`);
+            toConsole(`Ошибка при декодировании: ${matchValue_1.fields[0]}`);
             return void 0;
         }
         else {
-            const t = matchValue_1.fields[0];
-            return t;
+            return matchValue_1.fields[0];
         }
     }
 }

@@ -11,8 +11,7 @@ export function init() {
         return init_1();
     }
     else {
-        const savedState = matchValue;
-        return savedState;
+        return matchValue;
     }
 }
 

@@ -19,10 +19,7 @@ export function navItem(label, targetPage, current, dispatch) {
     const xs = ofArray([["children", label], ["className", join(" ", toList(delay(() => (equals(current, targetPage) ? singleton("has-text-primary") : empty()))))], ["onClick", (_arg) => {
         dispatch(new Msg(0, [targetPage]));
     }]]);
-    return createElement("a", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("navbar-item"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-        const v = tupledArg[0];
-        return v === "className";
-    }, map((value_4) => value_4, xs)))))])))))));
+    return createElement("a", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("navbar-item"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_4) => value_4, xs)))))])))))));
 }
 
 export function navbar(model, dispatch) {
@@ -33,17 +30,11 @@ export function navbar(model, dispatch) {
     }], (elems_4 = [(elms_1 = ofArray([(xs = ofArray([["children", "HabitHub"], ["style", {
         fontWeight: "bold",
         fontSize: 22 + "px",
-    }]]), createElement("a", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("navbar-item"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-        const v = tupledArg[0];
-        return v === "className";
-    }, map((value_8) => value_8, xs)))))])))))))), (elms = singleton_1((xs_4 = ofArray([["children", model.DarkMode ? "☀ Light" : "🌙 Dark"], ["onClick", (_arg_1) => {
+    }]]), createElement("a", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("navbar-item"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_8) => value_8, xs)))))])))))))), (elms = singleton_1((xs_4 = ofArray([["children", model.DarkMode ? "☀ Light" : "🌙 Dark"], ["onClick", (_arg_1) => {
         dispatch(new Msg(9, []));
     }], ["style", {
         marginLeft: 10,
-    }]]), createElement("a", createObj(toList(delay(() => append(xs_4, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => {
-        const v_1 = tupledArg_1[0];
-        return v_1 === "className";
-    }, map((value_16) => value_16, xs_4)))))]))))))))), createElement("div", {
+    }]]), createElement("a", createObj(toList(delay(() => append(xs_4, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => (tupledArg_1[0] === "className"), map((value_16) => value_16, xs_4)))))]))))))))), createElement("div", {
         className: "navbar-item",
         children: Interop_reactApi.Children.toArray(Array.from(elms)),
     }))]), createElement("div", {
@@ -56,33 +47,21 @@ export function navbar(model, dispatch) {
         className: "navbar-menu",
         children: Interop_reactApi.Children.toArray(Array.from(elms_3)),
     }))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_4))])]);
-    return createElement("nav", createObj(toList(delay(() => append(xs_12, delay(() => singleton(["className", join(" ", append_1(singleton_1("navbar"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => {
-        const v_2 = tupledArg_2[0];
-        return v_2 === "className";
-    }, map((value_31) => value_31, xs_12)))))])))))));
+    return createElement("nav", createObj(toList(delay(() => append(xs_12, delay(() => singleton(["className", join(" ", append_1(singleton_1("navbar"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => (tupledArg_2[0] === "className"), map((value_31) => value_31, xs_12)))))])))))));
 }
 
 export const heroSection = (() => {
     let elems_2, elms_1, elms, xs, xs_4;
     const xs_10 = ofArray([["className", "is-primary"], ["style", {
         backgroundColor: "#2e2e48",
-    }], ["className", "is-medium"], (elems_2 = [(elms_1 = singleton_1((elms = ofArray([(xs = ofArray([["className", "has-text-white"], ["children", "Welcome to HabitHub"]]), createElement("p", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("title"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-        const v = tupledArg[0];
-        return v === "className";
-    }, map((value_10) => value_10, xs)))))])))))))), (xs_4 = ofArray([["className", "has-text-light"], ["children", "Your minimalist habit tracker for building a better you."]]), createElement("p", createObj(toList(delay(() => append(xs_4, delay(() => singleton(["className", join(" ", append_1(singleton_1("subtitle"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => {
-        const v_1 = tupledArg_1[0];
-        return v_1 === "className";
-    }, map((value_16) => value_16, xs_4)))))]))))))))]), createElement("div", {
+    }], ["className", "is-medium"], (elems_2 = [(elms_1 = singleton_1((elms = ofArray([(xs = ofArray([["className", "has-text-white"], ["children", "Welcome to HabitHub"]]), createElement("p", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("title"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_10) => value_10, xs)))))])))))))), (xs_4 = ofArray([["className", "has-text-light"], ["children", "Your minimalist habit tracker for building a better you."]]), createElement("p", createObj(toList(delay(() => append(xs_4, delay(() => singleton(["className", join(" ", append_1(singleton_1("subtitle"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => (tupledArg_1[0] === "className"), map((value_16) => value_16, xs_4)))))]))))))))]), createElement("div", {
         className: "container",
         children: Interop_reactApi.Children.toArray(Array.from(elms)),
     }))), createElement("div", {
         className: "hero-body",
         children: Interop_reactApi.Children.toArray(Array.from(elms_1)),
     }))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_2))])]);
-    return createElement("section", createObj(toList(delay(() => append(xs_10, delay(() => singleton(["className", join(" ", append_1(singleton_1("hero"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => {
-        const v_2 = tupledArg_2[0];
-        return v_2 === "className";
-    }, map((value_25) => value_25, xs_10)))))])))))));
+    return createElement("section", createObj(toList(delay(() => append(xs_10, delay(() => singleton(["className", join(" ", append_1(singleton_1("hero"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => (tupledArg_2[0] === "className"), map((value_25) => value_25, xs_10)))))])))))));
 })();
 
 export const homePage = (() => {
@@ -112,10 +91,7 @@ export function formField(labelText, value, onChange) {
         children: labelText,
     }), (elms = singleton_1((xs_1 = ofArray([["value", value], ["onChange", (ev) => {
         onChange(ev.target.value);
-    }]]), createElement("input", createObj(toList(delay(() => append(xs_1, delay(() => append(singleton(["type", "text"]), delay(() => singleton(["className", join(" ", append_1(singleton_1("input"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-        const v = tupledArg[0];
-        return v === "className";
-    }, map((value_10) => value_10, xs_1)))))]))))))))))), createElement("div", {
+    }]]), createElement("input", createObj(toList(delay(() => append(xs_1, delay(() => append(singleton(["type", "text"]), delay(() => singleton(["className", join(" ", append_1(singleton_1("input"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_10) => value_10, xs_1)))))]))))))))))), createElement("div", {
         className: "control",
         children: Interop_reactApi.Children.toArray(Array.from(elms)),
     }))]);
@@ -126,40 +102,13 @@ export function formField(labelText, value, onChange) {
 }
 
 export function categoryTag(category) {
-    let patternInput;
-    switch (category.tag) {
-        case 1: {
-            patternInput = ["Productivity", "is-info"];
-            break;
-        }
-        case 2: {
-            patternInput = ["Learning", "is-warning"];
-            break;
-        }
-        case 3: {
-            patternInput = ["Personal", "is-primary"];
-            break;
-        }
-        case 4: {
-            const s = category.fields[0];
-            patternInput = [s, "is-light"];
-            break;
-        }
-        default: {
-            patternInput = ["Health", "is-success"];
-        }
-    }
-    const text = patternInput[0];
-    const color = patternInput[1];
-    const xs = ofArray([["className", color], ["children", text]]);
-    return createElement("span", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("tag"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-        const v = tupledArg[0];
-        return v === "className";
-    }, map((value_4) => value_4, xs)))))])))))));
+    const patternInput = (category.tag === 1) ? ["Productivity", "is-info"] : ((category.tag === 2) ? ["Learning", "is-warning"] : ((category.tag === 3) ? ["Personal", "is-primary"] : ((category.tag === 4) ? [category.fields[0], "is-light"] : ["Health", "is-success"])));
+    const xs = ofArray([["className", patternInput[1]], ["children", patternInput[0]]]);
+    return createElement("span", createObj(toList(delay(() => append(xs, delay(() => singleton(["className", join(" ", append_1(singleton_1("tag"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_4) => value_4, xs)))))])))))));
 }
 
 export function categorySelector(selected, dispatch) {
-    let elms, patternInput, elems, nonCp, cp, elems_1;
+    let elms, patternInput, elems, elems_1;
     const elms_1 = ofArray([createElement("label", {
         className: "label",
         children: "Category",
@@ -180,10 +129,7 @@ export function categorySelector(selected, dispatch) {
     }), createElement("option", {
         value: "Other",
         children: "Other",
-    })], ["children", Interop_reactApi.Children.toArray(Array.from(elems))])])), (nonCp = patternInput[1], (cp = patternInput[0], createElement("div", createObj(ofArray([["className", join(" ", append_1(singleton_1("select"), map((arg_2) => toString(arg_2[1]), filter((tupledArg) => {
-        const v = tupledArg[0];
-        return v === "className";
-    }, map((value_30) => value_30, cp)))))], (elems_1 = [createElement("select", createObj(nonCp))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_1))])]))))))), createElement("div", {
+    })], ["children", Interop_reactApi.Children.toArray(Array.from(elems))])])), createElement("div", createObj(ofArray([["className", join(" ", append_1(singleton_1("select"), map((arg_2) => toString(arg_2[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_30) => value_30, patternInput[0])))))], (elems_1 = [createElement("select", createObj(patternInput[1]))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_1))])]))))), createElement("div", {
         className: "control",
         children: Interop_reactApi.Children.toArray(Array.from(elms)),
     }))]);
@@ -206,18 +152,12 @@ export function newHabitForm(form, dispatch) {
     })), delay(() => append(singleton(categorySelector(form.SelectedCategory, (v_3) => {
         dispatch(new Msg(4, [v_3]));
     })), delay(() => {
-        let matchValue, err, xs_1;
-        return append((matchValue = form.Error, (matchValue == null) ? singleton(defaultOf()) : ((err = matchValue, singleton((xs_1 = ofArray([["className", "is-danger"], ["children", err]]), createElement("div", createObj(toList(delay(() => append(xs_1, delay(() => singleton(["className", join(" ", append_1(singleton_1("notification"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-            const v_4 = tupledArg[0];
-            return v_4 === "className";
-        }, map((value_9) => value_9, xs_1)))))])))))))))))), delay(() => {
+        let matchValue, xs_1;
+        return append((matchValue = form.Error, (matchValue == null) ? singleton(defaultOf()) : singleton((xs_1 = ofArray([["className", "is-danger"], ["children", matchValue]]), createElement("div", createObj(toList(delay(() => append(xs_1, delay(() => singleton(["className", join(" ", append_1(singleton_1("notification"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_9) => value_9, xs_1)))))])))))))))), delay(() => {
             let xs_5;
             return singleton((xs_5 = ofArray([["className", "is-primary"], ["children", "Add Habit"], ["onClick", (_arg_1) => {
                 dispatch(new Msg(5, []));
-            }]]), createElement("button", createObj(toList(delay(() => append(xs_5, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => {
-                const v_5 = tupledArg_1[0];
-                return v_5 === "className";
-            }, map((value_16) => value_16, xs_5)))))])))))))));
+            }]]), createElement("button", createObj(toList(delay(() => append(xs_5, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => (tupledArg_1[0] === "className"), map((value_16) => value_16, xs_5)))))])))))))));
         }));
     }))))))))))));
     return createElement("div", {
@@ -249,23 +189,11 @@ export function habitCard(habit, dispatch) {
         children: Interop_reactApi.Children.toArray(Array.from(elms_1)),
     })), (elms_3 = singleton_1((elms_2 = ofArray([(xs_3 = ofArray([["className", "is-success"], ["children", "Done Today"], ["onClick", (_arg) => {
         dispatch(new Msg(7, [habit.Id, utcNow()]));
-    }]]), createElement("a", createObj(toList(delay(() => append(xs_3, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-        const v = tupledArg[0];
-        return v === "className";
-    }, map((value_21) => value_21, xs_3)))))])))))))), (xs_7 = ofArray([["className", "is-danger"], ["children", "Delete"], ["onClick", (_arg_2) => {
+    }]]), createElement("a", createObj(toList(delay(() => append(xs_3, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_21) => value_21, xs_3)))))])))))))), (xs_7 = ofArray([["className", "is-danger"], ["children", "Delete"], ["onClick", (_arg_2) => {
         dispatch(new Msg(6, [habit.Id]));
-    }]]), createElement("a", createObj(toList(delay(() => append(xs_7, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => {
-        const v_1 = tupledArg_1[0];
-        return v_1 === "className";
-    }, map((value_28) => value_28, xs_7)))))])))))))), (xs_11 = toList(delay(() => append(singleton(["className", "is-light"]), delay(() => {
-        const hasReminder = false;
-        return append(singleton(["children", hasReminder ? "🔔" : "🔕"]), delay(() => singleton(["onClick", (_arg_4) => {
-            dispatch(new Msg(13, [habit.Id]));
-        }])));
-    })))), createElement("a", createObj(toList(delay(() => append(xs_11, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => {
-        const v_2 = tupledArg_2[0];
-        return v_2 === "className";
-    }, map((value_35) => value_35, xs_11)))))]))))))))]), createElement("div", {
+    }]]), createElement("a", createObj(toList(delay(() => append(xs_7, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => (tupledArg_1[0] === "className"), map((value_28) => value_28, xs_7)))))])))))))), (xs_11 = toList(delay(() => append(singleton(["className", "is-light"]), delay(() => append(singleton(["children", "🔕"]), delay(() => singleton(["onClick", (_arg_4) => {
+        dispatch(new Msg(13, [habit.Id]));
+    }]))))))), createElement("a", createObj(toList(delay(() => append(xs_11, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => (tupledArg_2[0] === "className"), map((value_35) => value_35, xs_11)))))]))))))))]), createElement("div", {
         className: "buttons",
         children: Interop_reactApi.Children.toArray(Array.from(elms_2)),
     }))), createElement("div", {
@@ -282,10 +210,9 @@ export function habitCard(habit, dispatch) {
 }
 
 export function weeklyProgressChart(habits) {
-    let properties_6, margin, elements, properties_1;
+    let properties_6, elements, properties_1;
     const now = utcNow();
     const startOfWeek = addDays(now, -dayOfWeek(now));
-    const days = toList(rangeDouble(0, 1, 6));
     const data = map((i) => {
         const day = addDays(startOfWeek, i);
         const count = length(filter((d) => equals_1(date_1(d), date_1(day)), collect((h) => h.Progress, habits))) | 0;
@@ -293,16 +220,16 @@ export function weeklyProgressChart(habits) {
             day: toString_1(day, "ddd"),
             value: count,
         };
-    }, days);
+    }, toList(rangeDouble(0, 1, 6)));
     const elms = ofArray([createElement("h4", {
         className: "title",
         children: "This Week",
-    }), (properties_6 = ofArray([["data", toArray(data)], (margin = {
+    }), (properties_6 = ofArray([["data", toArray(data)], ["margin", {
         top: defaultArg(5, 0),
         right: defaultArg(30, 0),
         left: defaultArg(20, 0),
         bottom: defaultArg(5, 0),
-    }, ["margin", margin]), (elements = ofArray([(properties_1 = singleton_1(["strokeDasharray", join(" ", map_1(int32ToString, new Int32Array([3, 3]), null))]), Interop_reactApi_1.createElement(CartesianGrid, createObj(properties_1))), Interop_reactApi_1.createElement(XAxis, {
+    }], (elements = ofArray([(properties_1 = singleton_1(["strokeDasharray", join(" ", map_1(int32ToString, new Int32Array([3, 3]), null))]), Interop_reactApi_1.createElement(CartesianGrid, createObj(properties_1))), Interop_reactApi_1.createElement(XAxis, {
         dataKey: (p) => p.day,
     }), Interop_reactApi_1.createElement(YAxis, {}), Interop_reactApi_1.createElement(Tooltip, {}), Interop_reactApi_1.createElement(Bar, {
         dataKey: (p_1) => p_1.value,
@@ -321,17 +248,16 @@ export function yearlyOverviewChart(habits) {
     const data = mapIndexed((i, month) => {
         const startDate = create(currentYear, i + 1, 1);
         const endDate = addMonths(startDate, 1);
-        const count = length(filter((d) => {
-            if (compare(d, startDate) >= 0) {
-                return compare(d, endDate) < 0;
-            }
-            else {
-                return false;
-            }
-        }, collect((h) => h.Progress, habits))) | 0;
         return {
             month: month,
-            value: count,
+            value: length(filter((d) => {
+                if (compare(d, startDate) >= 0) {
+                    return compare(d, endDate) < 0;
+                }
+                else {
+                    return false;
+                }
+            }, collect((h) => h.Progress, habits))),
         };
     }, months, null);
     const elms = ofArray([createElement("h4", {
@@ -406,10 +332,7 @@ export function calendarView(habits, dispatch) {
                             position: "absolute",
                             bottom: 5,
                             right: 5,
-                        }], (elems = [(xs_2 = ofArray([["className", "is-success"], ["children", completedHabits]]), createElement("span", createObj(toList(delay(() => append(xs_2, delay(() => singleton(["className", join(" ", append_1(singleton_1("tag"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-                            const v = tupledArg[0];
-                            return v === "className";
-                        }, map((value_39) => value_39, xs_2)))))]))))))))], ["children", Interop_reactApi.Children.toArray(Array.from(elems))])])))) : empty();
+                        }], (elems = [(xs_2 = ofArray([["className", "is-success"], ["children", completedHabits]]), createElement("span", createObj(toList(delay(() => append(xs_2, delay(() => singleton(["className", join(" ", append_1(singleton_1("tag"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_39) => value_39, xs_2)))))]))))))))], ["children", Interop_reactApi.Children.toArray(Array.from(elems))])])))) : empty();
                     })))), ["children", Interop_reactApi.Children.toArray(Array.from(elems_1))])])))), delay(() => {
                         currentDay = ((currentDay + 1) | 0);
                         return empty();
@@ -421,10 +344,7 @@ export function calendarView(habits, dispatch) {
         }, rangeDouble(0, 1, 5));
     })), createElement("tbody", {
         children: Interop_reactApi.Children.toArray(Array.from(children_6)),
-    }))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_2))])]), createElement("table", createObj(toList(delay(() => append(xs_8, delay(() => singleton(["className", join(" ", append_1(singleton_1("table"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => {
-        const v_1 = tupledArg_1[0];
-        return v_1 === "className";
-    }, map((value_44) => value_44, xs_8)))))]))))))))]);
+    }))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_2))])]), createElement("table", createObj(toList(delay(() => append(xs_8, delay(() => singleton(["className", join(" ", append_1(singleton_1("table"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => (tupledArg_1[0] === "className"), map((value_44) => value_44, xs_8)))))]))))))))]);
     return createElement("div", {
         children: Interop_reactApi.Children.toArray(Array.from(children_8)),
     });
@@ -446,26 +366,14 @@ export function achievementsPage(achievements) {
                 children: a.Title,
             })), delay(() => {
                 let xs_2;
-                return append(singleton((xs_2 = toList(delay(() => (a.IsUnlocked ? append(singleton(["className", "is-success"]), delay(() => singleton(["children", "Unlocked!"]))) : append(singleton(["className", "is-danger"]), delay(() => singleton(["children", "Locked"])))))), createElement("h6", createObj(toList(delay(() => append(xs_2, delay(() => singleton(["className", join(" ", append_1(singleton_1("subtitle"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-                    const v = tupledArg[0];
-                    return v === "className";
-                }, map((value_25) => value_25, xs_2)))))]))))))))), delay(() => append(singleton(createElement("p", {
+                return append(singleton((xs_2 = toList(delay(() => (a.IsUnlocked ? append(singleton(["className", "is-success"]), delay(() => singleton(["children", "Unlocked!"]))) : append(singleton(["className", "is-danger"]), delay(() => singleton(["children", "Locked"])))))), createElement("h6", createObj(toList(delay(() => append(xs_2, delay(() => singleton(["className", join(" ", append_1(singleton_1("subtitle"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_25) => value_25, xs_2)))))]))))))))), delay(() => append(singleton(createElement("p", {
                     children: [a.Description],
                 })), delay(() => ((a.IsUnlocked && (a.UnlockDate != null)) ? singleton(createElement("p", {
                     children: [`Unlocked on: ${toShortDateString(value_55(a.UnlockDate))}`],
                 })) : empty())))));
-            })))), ["children", Interop_reactApi.Children.toArray(Array.from(elems))])]), createElement("div", createObj(toList(delay(() => append(xs_6, delay(() => singleton(["className", join(" ", append_1(singleton_1("box"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => {
-                const v_1 = tupledArg_1[0];
-                return v_1 === "className";
-            }, map((value_30) => value_30, xs_6)))))]))))))))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_1))])]);
-            return createElement("div", createObj(toList(delay(() => append(xs_10, delay(() => singleton(["className", join(" ", append_1(singleton_1("column"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => {
-                const v_2 = tupledArg_2[0];
-                return v_2 === "className";
-            }, map((value_33) => value_33, xs_10)))))])))))));
-        }, achievements))), ["children", Interop_reactApi.Children.toArray(Array.from(elems_2))])]), createElement("div", createObj(toList(delay(() => append(xs_14, delay(() => singleton(["className", join(" ", append_1(singleton_1("columns"), map((arg_3) => toString(arg_3[1]), filter((tupledArg_3) => {
-            const v_3 = tupledArg_3[0];
-            return v_3 === "className";
-        }, map((value_36) => value_36, xs_14)))))])))))))));
+            })))), ["children", Interop_reactApi.Children.toArray(Array.from(elems))])]), createElement("div", createObj(toList(delay(() => append(xs_6, delay(() => singleton(["className", join(" ", append_1(singleton_1("box"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => (tupledArg_1[0] === "className"), map((value_30) => value_30, xs_6)))))]))))))))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_1))])]);
+            return createElement("div", createObj(toList(delay(() => append(xs_10, delay(() => singleton(["className", join(" ", append_1(singleton_1("column"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => (tupledArg_2[0] === "className"), map((value_33) => value_33, xs_10)))))])))))));
+        }, achievements))), ["children", Interop_reactApi.Children.toArray(Array.from(elems_2))])]), createElement("div", createObj(toList(delay(() => append(xs_14, delay(() => singleton(["className", join(" ", append_1(singleton_1("columns"), map((arg_3) => toString(arg_3[1]), filter((tupledArg_3) => (tupledArg_3[0] === "className"), map((value_36) => value_36, xs_14)))))])))))))));
     })))), createElement("section", {
         className: "section",
         children: Interop_reactApi.Children.toArray(Array.from(elms)),
@@ -499,19 +407,13 @@ export function statsPage(model, dispatch) {
             },
         })], ["children", Interop_reactApi.Children.toArray(Array.from(elems_2))])])))]), createElement("ul", {
             children: Interop_reactApi.Children.toArray(Array.from(children)),
-        }))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_3))])]), createElement("div", createObj(toList(delay(() => append(xs_7, delay(() => singleton(["className", join(" ", append_1(singleton_1("tabs"), map((arg) => toString(arg[1]), filter((tupledArg) => {
-            const v = tupledArg[0];
-            return v === "className";
-        }, map((value_23) => value_23, xs_7)))))]))))))))), delay(() => {
+        }))], ["children", Interop_reactApi.Children.toArray(Array.from(elems_3))])]), createElement("div", createObj(toList(delay(() => append(xs_7, delay(() => singleton(["className", join(" ", append_1(singleton_1("tabs"), map((arg) => toString(arg[1]), filter((tupledArg) => (tupledArg[0] === "className"), map((value_23) => value_23, xs_7)))))]))))))))), delay(() => {
             let xs_21, elems_7;
             return append(singleton((xs_21 = ofArray([["className", "is-grouped"], (elems_7 = toList(delay(() => {
                 let elms, xs_11;
                 return append(singleton((elms = singleton_1((xs_11 = ofArray([["className", "is-light"], ["children", "All Categories"], ["onClick", (_arg_4) => {
                     dispatch(new Msg(11, [void 0]));
-                }]]), createElement("button", createObj(toList(delay(() => append(xs_11, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => {
-                    const v_1 = tupledArg_1[0];
-                    return v_1 === "className";
-                }, map((value_32) => value_32, xs_11)))))]))))))))), createElement("div", {
+                }]]), createElement("button", createObj(toList(delay(() => append(xs_11, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_1) => toString(arg_1[1]), filter((tupledArg_1) => (tupledArg_1[0] === "className"), map((value_32) => value_32, xs_11)))))]))))))))), createElement("div", {
                     className: "control",
                     children: Interop_reactApi.Children.toArray(Array.from(elms)),
                 }))), delay(() => map_2((category) => {
@@ -521,19 +423,13 @@ export function statsPage(model, dispatch) {
                     }]), delay(() => {
                         let elems_5;
                         return singleton((elems_5 = [categoryTag(category)], ["children", Interop_reactApi.Children.toArray(Array.from(elems_5))]));
-                    })))))), createElement("button", createObj(toList(delay(() => append(xs_16, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => {
-                        const v_2 = tupledArg_2[0];
-                        return v_2 === "className";
-                    }, map((value_43) => value_43, xs_16)))))])))))))));
+                    })))))), createElement("button", createObj(toList(delay(() => append(xs_16, delay(() => singleton(["className", join(" ", append_1(singleton_1("button"), map((arg_2) => toString(arg_2[1]), filter((tupledArg_2) => (tupledArg_2[0] === "className"), map((value_43) => value_43, xs_16)))))])))))))));
                     return createElement("div", {
                         className: "control",
                         children: Interop_reactApi.Children.toArray(Array.from(elms_1)),
                     });
                 }, [new HabitCategory(0, []), new HabitCategory(1, []), new HabitCategory(2, []), new HabitCategory(3, [])])));
-            })), ["children", Interop_reactApi.Children.toArray(Array.from(elems_7))])]), createElement("div", createObj(toList(delay(() => append(xs_21, delay(() => singleton(["className", join(" ", append_1(singleton_1("field"), map((arg_3) => toString(arg_3[1]), filter((tupledArg_3) => {
-                const v_3 = tupledArg_3[0];
-                return v_3 === "className";
-            }, map((value_49) => value_49, xs_21)))))]))))))))), delay(() => {
+            })), ["children", Interop_reactApi.Children.toArray(Array.from(elems_7))])]), createElement("div", createObj(toList(delay(() => append(xs_21, delay(() => singleton(["className", join(" ", append_1(singleton_1("field"), map((arg_3) => toString(arg_3[1]), filter((tupledArg_3) => (tupledArg_3[0] === "className"), map((value_49) => value_49, xs_21)))))]))))))))), delay(() => {
                 if (isEmpty(model.Habits)) {
                     return singleton(createElement("p", {
                         children: ["No data available yet."],

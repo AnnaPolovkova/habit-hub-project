@@ -1,0 +1,2 @@
+C:\Users\79043\HabitHub9\src\bin\Release\net6.0\fsharpapp.deps.json
+C:\Users\79043\HabitHub9\src\obj\Release\net6.0\fsharpapp.GeneratedMSBuildEditorConfig.editorconfig
