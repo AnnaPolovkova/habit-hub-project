@@ -1,0 +1,8 @@
+C:\Users\79043\SimpleBudgetTracker\src\bin\Debug\net6.0\fsharpapp.deps.json
+C:\Users\79043\SimpleBudgetTracker\src\obj\Debug\net6.0\fsharpapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\79043\HabitHub6\src\bin\Debug\net6.0\fsharpapp.deps.json
+C:\Users\79043\HabitHub6\src\obj\Debug\net6.0\fsharpapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\79043\HabitHub7 — копия\src\bin\Debug\net6.0\fsharpapp.deps.json
+C:\Users\79043\HabitHub7 — копия\src\obj\Debug\net6.0\fsharpapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\79043\HabitHub9\src\bin\Debug\net6.0\fsharpapp.deps.json
+C:\Users\79043\HabitHub9\src\obj\Debug\net6.0\fsharpapp.GeneratedMSBuildEditorConfig.editorconfig
