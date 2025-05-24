@@ -471,3 +471,4 @@ let rootView (model: Model) (dispatch: Msg -> unit) =
             | Achievements -> achievementsPage model.Achievements
         ]
     ]
+    
