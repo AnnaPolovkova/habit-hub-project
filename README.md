@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> eaef5c0d5ed87d78897343c1c7207df15a4d9c35
 # HabitHub 🌱
 
 A sleek and simple web app to build — and keep — healthy habits.  
@@ -98,8 +94,4 @@ Instructor: Adam Granicz, IntelliFactory
 git clone https://github.com/AnnaPolovkova/habit-hub-project.git
 cd habit-hub-project
 npm install
-<<<<<<< HEAD
 npm start
-=======
-npm start
->>>>>>> eaef5c0d5ed87d78897343c1c7207df15a4d9c35
