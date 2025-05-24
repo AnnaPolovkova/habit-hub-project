@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HabitHub — Трекер привычек</title>
+  <title>HabitHub — Habit Tracker</title>
 
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
   />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
 
   <style>
     body {
@@ -67,77 +61,49 @@
       color: #777;
       font-size: 0.9rem;
     }
+
+    .habit-card {
+      transition: transform 0.2s;
+    }
+    .habit-card:hover {
+      transform: translateY(-3px);
+    }
+    .calendar-day {
+      position: relative;
+      height: 60px;
+      padding-top: 20px;
+    }
+    .calendar-day-number {
+      position: absolute;
+      top: 5px;
+    }
+    .calendar-day-progress {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
+    .streak-fire {
+      color: orange;
+      margin-left: 5px;
+    }
+    .achievement-locked {
+      opacity: 0.6;
+    }
+    .achievement-unlocked {
+      border: 2px solid gold;
+    }
   </style>
 </head>
 <body>
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <strong>HabitHub</strong>
-      </a>
-      <a
-        role="button"
-        class="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarMenu"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarMenu" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="#home" data-page="Home">
-          Главная
-        </a>
-        <a class="navbar-item" href="#habits" data-page="Habits">
-          Привычки
-        </a>
-        <a class="navbar-item" href="#about" data-page="About">
-          О проекте
-        </a>
-      </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <button id="darkModeToggle" class="button is-light">
-            <span class="icon"><i class="fas fa-moon"></i></span>
-            <span>Тёмная тема</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
   <section class="section">
-    <div class="container" id="app">
-      
-    </div>
+    <div class="container" id="app"></div>
   </section>
 
   <footer>
-    HabitHub © 2025 — Ваш персональный трекер привычек
+    HabitHub — Made by Polovkova Anna
   </footer>
 
   <script src="bundle.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const burger = document.querySelector('.navbar-burger');
-      const menu = document.getElementById('navbarMenu');
-      burger.addEventListener('click', () => {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-      });
-
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-      });
-    });
-  </script>
 </body>
 </html>
